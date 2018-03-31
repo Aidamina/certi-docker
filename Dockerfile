@@ -24,7 +24,7 @@ RUN cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=clang-3.8 -DCMAKE_CXX_CO
 RUN make install
 
 
-FROM ubuntu:18.04 as old
+FROM ubuntu:18.04
 
 #libxml2 is the only dependency we need
 RUN apt-get update && apt-get install -y libxml2 && rm -rf /var/lib/apt/lists/*
